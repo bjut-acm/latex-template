@@ -1,0 +1,48 @@
+\documentclass{main/problem}
+\usepackage{subfiles}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=cyan,
+    linktoc=all,
+}
+
+\begin{document}
+
+\title{标题}
+\author{作者}
+\date{}
+
+{%
+    \parskip=0pt%
+    \maketitle%
+    \thispagestyle{empty}%
+    \tableofcontents%
+    \clearpage%
+    \pagenumbering{arabic}%
+}
+
+\subfile{A/main.tex}
+\clearpage
+\subfile{B/main.tex}
+\clearpage
+\subfile{C/main.tex}
+\clearpage
+\subfile{D/main.tex}
+\clearpage
+\subfile{E/main.tex}
+\clearpage
+\subfile{F/main.tex}
+\clearpage
+\subfile{G/main.tex}
+\clearpage
+\subfile{H/main.tex}
+\clearpage
+\subfile{I/main.tex}
+\clearpage
+\subfile{J/main.tex}
+
+\end{document}

@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{main/zh_fonts}[My package for zh fonts]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
+% vim:ft=tex
+
+\defaultfontfeatures{Path = ../main/fonts/, Mapping=tex-text}
+
+\setCJKmainfont[
+BoldFont=SourceHanSerifSC-Heavy.otf,
+ItalicFont=AdobeKaitiStd-Regular.otf,
+SmallCapsFont=AdobeHeitiStd-Regular.otf
+]{SourceHanSerifSC-Regular.otf}
+
+%  AdobeSongStd-Light.otf AdobeHeitiStd-Regular.otf  SourceHanSerifSC-Light.otf SourceHanSansSC-Light.otf
+
+\setCJKsansfont[BoldFont=SourceHanSans-Bold.otf]{SourceHanSansSC-Light.otf}
+\setCJKmonofont{SourceHanSans-Regular.otf}
+
+
+\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+\setCJKfamilyfont{shsb}{SourceHanSans-Bold.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+\newcommand*{\shsb}{\CJKfamily{shsb}}
+
+% \setsansfont{Trebuchet MS}
+
+\endinput
